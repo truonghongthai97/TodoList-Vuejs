@@ -77,7 +77,7 @@ export default {
       return this.items.length === 0;
     },
     selectAll: function() {
-      return this.items.some(item => item.completed === true);
+      return this.items.every(item => item.completed === true);
     }
   }
 };

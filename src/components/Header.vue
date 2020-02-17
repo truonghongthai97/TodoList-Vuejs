@@ -3,7 +3,7 @@
     <div @click="handleClickSelectAll">
       <font-awesome-icon
         icon="chevron-down"
-        :class="{'switch-selection': selectAll, 'hidden-icon': isNotItem, 'select-all': leastOneCompletedItem}"
+        :class="{'switch-selection': true, 'hidden-icon': isNotItem, 'select-all': selectAll}"
       />
     </div>
     <input
@@ -22,7 +22,7 @@ export default {
     isNotItem: {
       default: false
     },
-    leastOneCompletedItem: {
+    selectAll: {
       default: false
     }
   },
@@ -40,11 +40,6 @@ export default {
       this.textInput = "";
     }
   },
-  computed: {
-    selectAll: function() {
-      return this.isSelectAll;
-    }
-  }
 };
 </script>
 
