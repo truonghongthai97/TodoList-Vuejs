@@ -11,6 +11,7 @@
         />
       </div>
       <p>{{ item.value }}</p>
+      123
     </div>
     <div>
       <font-awesome-icon
