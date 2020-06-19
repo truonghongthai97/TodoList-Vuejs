@@ -2,18 +2,22 @@
   <div class="wrapper-item">
     <div class="item-left">
       <div
-        :class="{'wrapper-check' : true,'wrapper-check__checked': item.completed}"
+        :class="['wrapper-check', { 'wrapper-check__checked': item.completed }]"
         @click="handleCheck(item.id)"
       >
         <font-awesome-icon
           icon="check"
-          :class="{'ic-check' : true, 'ic-visable': item.completed}"
+          :class="{ 'ic-check': true, 'ic-visable': item.completed }"
         />
       </div>
-      <p>{{item.value}}</p>
+      <p>{{ item.value }}</p>
     </div>
     <div>
-      <font-awesome-icon icon="times" class="ic-delete" @click="handleDeleteItem(item.id)" />
+      <font-awesome-icon
+        icon="times"
+        class="ic-delete"
+        @click="handleDeleteItem(item.id)"
+      />
     </div>
   </div>
 </template>
@@ -34,7 +38,7 @@ export default {
     handleDeleteItem(itemId) {
       this.$emit("onDeleteItem", itemId);
     }
-  },
+  }
 };
 </script>
 
@@ -87,5 +91,3 @@ export default {
   display: block;
 }
 </style>
-
-
